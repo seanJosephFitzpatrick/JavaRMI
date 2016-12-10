@@ -19,6 +19,7 @@ public class ServiceHandler extends HttpServlet {
 	private static ExecutorService executor;
 	private final int EXECUTOR_POOL_SIZE = 10;
 	private boolean checkProcessed = false;
+	private String distance = "";
 	
 
 	public void init() throws ServletException {
@@ -74,29 +75,27 @@ public class ServiceHandler extends HttpServlet {
 			// Execute the Worker(fixed_pool_size)
 			executor.execute(worker);
 			
-			PrintWriter writer = resp.getWriter();
-			writer.println("<h3>Hello from doget</h3>");
-		
 			jobNumber++;
 			
 		}else{
 			// ELSE - Check outQueue for finished job
 
-						// Check HashMap for
+						// Check HashMap
 						if (OutQueue.containsKey(taskNumber)) {
 							
 							Resultator result = OutQueue.get(taskNumber);
 
 							System.out.println("\nChecking Status of Task No : " + taskNumber);
-
+							
+							//Check to see if checkProcessed is True
 							checkProcessed = result.isProcessed();
 
-							// Check to see if result is Processed
+							// if checkProcessed is True
 							if (checkProcessed == true) {
 								// Remove the processed item from Map by taskNumber
 								OutQueue.remove(taskNumber);
-								//Get the Distance of the Current Task
-								String distance = result.getResult();
+								//Get the Result of the Current Task
+								distance = result.getResult();
 
 								System.out.println("Task : " + taskNumber + " Removed from OutQueue");
 								System.out.println("\nDistance Between String (" + str1 + ") and String (" + str2 + ") = " + distance);
@@ -108,6 +107,9 @@ public class ServiceHandler extends HttpServlet {
 		
 		out.print("<H1>Processing request for Job#: " + taskNumber + "</H1>");
 		out.print("<div id=\"r\"></div>");
+		
+		PrintWriter writer = resp.getWriter();
+		writer.println("<h3>Result : " + distance + "</h3>");
 		
 		out.print("<font color=\"#993333\"><b>");
 		out.print("RMI Server is located at " + remoteHost);
