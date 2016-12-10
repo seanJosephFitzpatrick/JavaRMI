@@ -20,16 +20,19 @@ public class Worker implements Runnable{
 
 	
 	public void run() {
+		//Take From InQueue
 		Request request = InQueue.poll();
 
 		try {
-			System.out.println("Task No : " + request.getTaskNumber() + "is being processed");
+			
+			System.out.println("Task No : " + request.getTaskNumber() + " is being processed");
+			
 			//Sleep for 4 seconds
 			Thread.sleep(4000);
 			
 			result = stringService.compare(request.getStr1(), request.getStr2(), request.getAlgorithim());
 			
-			//Add to OutMap
+			//Add to HashMap
 			OutQueue.put(request.getTaskNumber(), result);
 			
 			

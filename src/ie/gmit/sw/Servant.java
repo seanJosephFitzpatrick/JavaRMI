@@ -10,8 +10,6 @@ public class Servant {
     public static void main(String[] args) throws Exception {
 
         StringService ss = new StringServiceImpl();
-        
-        //System.setProperty("java.rmi.server.hostname","localhost");
 
         //Start the RMI regstry on port 1099
         LocateRegistry.createRegistry(1099);

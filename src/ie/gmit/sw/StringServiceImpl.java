@@ -14,14 +14,16 @@ public class StringServiceImpl extends UnicastRemoteObject implements StringServ
     private HammingDistance hammingDistance;
 	
 	public StringServiceImpl() throws RemoteException{
+		resultator = new ResultatorIMPL(); 
 		levenshtein = new Levenshtein(); 
 		damerauLevenshtein = new DamerauLevenshtein();
 		hammingDistance = new HammingDistance();
 	}
 
 	public Resultator compare(String str1, String str2, String algorithm) throws RemoteException {
-		resultator = new ResultatorIMPL(); 
+		
 	    switch(algorithm){
+	    
                 case "Damerau-Levenshtein Distance":
                 	resultator.setResult(String.valueOf(damerauLevenshtein.distance(str1, str2)));
                 case "Levenshtein Distance":
@@ -37,5 +39,5 @@ public class StringServiceImpl extends UnicastRemoteObject implements StringServ
 			e.printStackTrace();
 		}
         return resultator;
-}
+	}
 }

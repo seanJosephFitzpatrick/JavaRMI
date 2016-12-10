@@ -11,7 +11,7 @@
 	<tr>
 		<td valign="top">
 
-			<form bgcolor="white" method="POST" action="doProcess">
+			<form name="form" bgcolor="white" method="POST" action="doProcess">
 				<fieldset>
 					<legend><h3>Specify Details</h3></legend>
 				
@@ -40,7 +40,6 @@
 					<center><input type="submit" value="Compare"></center>
 				</fieldset>							
 			</form>	
-
 		</td>
 	</tr>
 </table>

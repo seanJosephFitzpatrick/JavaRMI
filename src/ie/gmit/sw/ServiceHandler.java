@@ -19,7 +19,7 @@ public class ServiceHandler extends HttpServlet {
 	private static ExecutorService executor;
 	private final int EXECUTOR_POOL_SIZE = 10;
 	private boolean checkProcessed = false;
-	private String distance = "";
+	
 
 	public void init() throws ServletException {
 		ServletContext ctx = getServletContext();
@@ -87,7 +87,7 @@ public class ServiceHandler extends HttpServlet {
 							
 							Resultator result = OutQueue.get(taskNumber);
 
-							System.out.println("\nChecking Status of Task No:" + taskNumber);
+							System.out.println("\nChecking Status of Task No : " + taskNumber);
 
 							checkProcessed = result.isProcessed();
 
@@ -96,10 +96,10 @@ public class ServiceHandler extends HttpServlet {
 								// Remove the processed item from Map by taskNumber
 								OutQueue.remove(taskNumber);
 								//Get the Distance of the Current Task
-								distance = result.getResult();
+								String distance = result.getResult();
 
-								System.out.println("\nTask " + taskNumber + "Removed from OutQueue");
-								System.out.println("Distance Between String (" + str1 + ") and String (" + str2 + ") = " + distance);
+								System.out.println("Task : " + taskNumber + " Removed from OutQueue");
+								System.out.println("\nDistance Between String (" + str1 + ") and String (" + str2 + ") = " + distance);
 							}
 			}
 		}
