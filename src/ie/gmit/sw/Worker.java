@@ -24,10 +24,9 @@ public class Worker implements Runnable{
 
 		try {
 			System.out.println("Task No : " + request.getTaskNumber() + "is being processed");
-			//Sleep for 3 seconds
-			Thread.sleep(3000);
+			//Sleep for 4 seconds
+			Thread.sleep(4000);
 			
-	
 			result = stringService.compare(request.getStr1(), request.getStr2(), request.getAlgorithim());
 			
 			//Add to OutMap

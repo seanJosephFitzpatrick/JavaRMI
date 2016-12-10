@@ -29,7 +29,7 @@ public class Algorithms {
 			}
 			return  counter;
 		}
-		
+		/*
 		public int Levenshtein(String s, String t) {
 			int[][] distance = new int[s.length() + 1][t.length() + 1];
 	        for (int i = 0; i <= s.length(); i++) distance[i][0] = i;
@@ -42,6 +42,6 @@ public class Algorithms {
 	    
 	        }
 	        return distance[s.length()][t.length()];
-	}
+	}*/
 
 }
