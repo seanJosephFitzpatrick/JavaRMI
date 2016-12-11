@@ -9,12 +9,12 @@ A Java RMI [Remote Method Invocation] [https://en.wikipedia.org/wiki/Java_remote
 
 ##Running the Program
 
-1) ###Set up the Service
+###Set up the Service
 ```
 Run the "string-service.jar" with the following command: java –cp ./string-service.jar ie.gmit.sw.Servant          
 ```
 
-2) ###Set up Web Application
+###Set up Web Application
 ```
 Apache-tomcat-9.0.0.M13 was used for the development of this application.     
 Place the "comparator.war" file into the apache-tomcat/webapps folder.        
@@ -24,11 +24,9 @@ cd into the apache-tomcat/bin and run the "startUp.bat" file.
 
 
 #Algorithms Implemented.
-```
 [Hamming Distance][https://en.wikipedia.org/wiki/Hamming_distance]        
 [Levenshtein Distance][https://en.wikipedia.org/wiki/Levenshtein_distance]         
-[Damerau-Levenshtein Distance][https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance]        
-```
+[Damerau-Levenshtein Distance][https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance] 
 
 
 
