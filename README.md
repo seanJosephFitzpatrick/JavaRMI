@@ -21,6 +21,11 @@ Place the "comparator.war" file into the apache-tomcat/webapps folder.
 cd into the apache-tomcat/bin and run the "startUp.bat" file.         
 ```
 
+##User Guide
+1) Select Algoritm from the drop-down menu
+2) Enter a text string into each input box
+3) Click the compare button
+
 
 
 #Algorithms Implemented.
