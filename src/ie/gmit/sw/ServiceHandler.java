@@ -46,7 +46,7 @@ public class ServiceHandler extends HttpServlet {
 		String taskNumber = req.getParameter("frmTaskNumber");
 		
 		try {
-			ss = (StringService) Naming.lookup("rmi://"+remoteHost+":1099/StringService");
+			ss = (StringService) Naming.lookup("rmi://localhost:1099/StringService");
 		} catch (NotBoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

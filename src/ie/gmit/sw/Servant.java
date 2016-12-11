@@ -1,7 +1,5 @@
 package ie.gmit.sw;
 
-//import ie.gmit.sw;
-
 import java.rmi.*;
 import java.rmi.registry.LocateRegistry;;
 
