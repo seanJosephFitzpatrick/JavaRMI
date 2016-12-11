@@ -27,7 +27,7 @@ public class Worker implements Runnable{
 			
 			System.out.println("Task No : " + request.getTaskNumber() + " is being processed");
 			
-			//Sleep for 4 seconds
+			//Sleep for 8 seconds
 			Thread.sleep(8000);
 			
 			result = stringService.compare(request.getStr1(), request.getStr2(), request.getAlgorithim());

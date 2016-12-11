@@ -12,6 +12,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 public class ServiceHandler extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
 	private String remoteHost = null;
 	private static long jobNumber = 0;
 	private static LinkedList<Request> InQueue;
@@ -37,13 +39,11 @@ public class ServiceHandler extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		
-		//Initialise some request varuables with the submitted form info. These are local to this method and thread safe...
+		//Initialize some request variables with the submitted form info. These are local to this method and thread safe...
 		String algorithm = req.getParameter("cmbAlgorithm");
 		String str1 = req.getParameter("txtS");
 		String str2 = req.getParameter("txtT");
 		String taskNumber = req.getParameter("frmTaskNumber");
-		
-		
 		
 		try {
 			ss = (StringService) Naming.lookup("rmi://"+remoteHost+":1099/StringService");
@@ -72,7 +72,7 @@ public class ServiceHandler extends HttpServlet {
 			// Pass the Request Obj to a Worker Class (Thread)
 			Runnable worker = new Worker(InQueue, OutQueue, ss);
 
-			// Execute the Worker(fixed_pool_size)
+			// Execute the Worker(EXECUTOR_POOL_SIZE)
 			executor.execute(worker);
 			
 			jobNumber++;
@@ -85,8 +85,8 @@ public class ServiceHandler extends HttpServlet {
 				
 					Resultator result = OutQueue.get(taskNumber);
 	
+					//console print
 					System.out.println("\nChecking Status of Task No : " + taskNumber);
-					
 					
 					checkProcessed = result.isProcessed();
 					
@@ -97,6 +97,7 @@ public class ServiceHandler extends HttpServlet {
 						//Get the Result of the Current Task
 						distance = result.getResult();
 						
+						//Console print
 						System.out.println("Task : " + taskNumber + " Removed from OutQueue");
 						System.out.println("\nDistance Between String (" + str1 + ") and String (" + str2 + ") = " + distance);
 						
@@ -115,6 +116,7 @@ public class ServiceHandler extends HttpServlet {
 			
 			out.print("<font color=\"#993333\"><b>");
 			out.print("<br><br><center><h1>Processing request for Job#: " + taskNumber + "</h1><center>");
+			out.print("<br><h3>Please wait....</h3><br>");
 		
 			out.print("RMI Server is located at " + remoteHost);
 			out.print("<br>Algorithm: " + algorithm);		

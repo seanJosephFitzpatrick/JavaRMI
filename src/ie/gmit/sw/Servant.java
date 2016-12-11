@@ -11,10 +11,10 @@ public class Servant {
 
         StringService ss = new StringServiceImpl();
 
-        //Start the RMI regstry on port 1099
+        //Start the RMI registry on port 1099
         LocateRegistry.createRegistry(1099);
 
-        //Bind our remote object to the registry with the human-readable name "MyStringCompareService"
+        //Bind our remote object to the registry with the human-readable name "StringService"
         Naming.rebind("StringService", ss);
 
         //Print a nice message to standard output
