@@ -11,7 +11,7 @@
 	<tr>
 		<td valign="top">
 
-			<form bgcolor="white" method="POST" action="doProcess">
+			<form name="form" bgcolor="white" method="POST" action="doProcess">
 				<fieldset>
 					<legend><h3>Specify Details</h3></legend>
 				
@@ -19,13 +19,13 @@
 						
 					<select name="cmbAlgorithm">
 						<option>Damerau-Levenshtein Distance</option>
-						<option>Euclidean Distance</option>
 						<option>Hamming Distance</option>
+						<option selected>Levenshtein Distance</option>
+				<!-- 	<option>Euclidean Distance</option>
 						<option>Hirschberg's Algorithm</option>
 						<option>Jaro–Winkler Distance</option>
-						<option selected>Levenshtein Distance</option>
 						<option>Needleman-Wunsch</option>
-						<option>Smith Waterman</option>
+						<option>Smith Waterman</option>		-->
 					</select>	
 					<p/>
 
@@ -40,7 +40,6 @@
 					<center><input type="submit" value="Compare"></center>
 				</fieldset>							
 			</form>	
-
 		</td>
 	</tr>
 </table>

@@ -2,27 +2,34 @@ package ie.gmit.sw;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import ie.gmit.stringAlgo.*;
 
 
 public class StringServiceImpl extends UnicastRemoteObject implements StringService{
 
 	private static final long serialVersionUID = 1L;
-	private Algorithms algorithms;
-        private Resultator resultator;
+    private Resultator resultator;
+    private Levenshtein levenshtein;
+    private DamerauLevenshtein damerauLevenshtein;
+    private HammingDistance hammingDistance;
 	
 	public StringServiceImpl() throws RemoteException{
-		algorithms = new Algorithms();
+		resultator = new ResultatorIMPL(); 
+		levenshtein = new Levenshtein(); 
+		damerauLevenshtein = new DamerauLevenshtein();
+		hammingDistance = new HammingDistance();
 	}
 
-	public Resultator compare(String a, String b, String algorithm) throws RemoteException {
-            resultator = new ResultatorIMPL(); 
+	public Resultator compare(String str1, String str2, String algorithm) throws RemoteException {
+		
 	    switch(algorithm){
+	    
                 case "Damerau-Levenshtein Distance":
-                	resultator.setResult(String.valueOf((algorithms.DamerauLevenshtein(a, b))));
+                	resultator.setResult(String.valueOf(damerauLevenshtein.distance(str1, str2)));
                 case "Levenshtein Distance":
-                	resultator.setResult(String.valueOf((algorithms.Levenshtein(a,b))));
+                	resultator.setResult(String.valueOf(levenshtein.distance(str1, str2)));
                 case "Hamming Distance":
-                	resultator.setResult(String.valueOf((algorithms.HammingDistance(a, b))));              
+                	resultator.setResult(String.valueOf(hammingDistance.distance(str1, str2)));             
 		}
         resultator.setProcessed();
         try {
@@ -32,5 +39,5 @@ public class StringServiceImpl extends UnicastRemoteObject implements StringServ
 			e.printStackTrace();
 		}
         return resultator;
-}
+	}
 }
