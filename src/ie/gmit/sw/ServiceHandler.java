@@ -107,7 +107,7 @@ public class ServiceHandler extends HttpServlet {
 						out.print("<br>Algorithm: " + algorithm);		
 						out.print("<br>String <i>one</i> : " + str1);
 						out.print("<br>String <i>two</i> : " + str2);
-	
+						
 				}
 			}
 		}
