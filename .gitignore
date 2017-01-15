@@ -1,1 +1,8 @@
-/build/
+# eclipse
+.classpath
+.project
+.recommenders
+.settings/
+.metadata/
+
+bin/
