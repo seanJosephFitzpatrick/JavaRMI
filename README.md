@@ -27,16 +27,24 @@ Video tutorial of How to Install Apache Tomcat on Windows here [Install Apache T
 
 ## Deployment
 
+There are two methods for deployment. Running the application using the string-service.jar and comparator.war files is the fastest as you just need java and Apache installed.
+
 * **Eclipse**          
 Launch Eclipse and set the workspace as the root folder that was extracted from the GitHub project. Select the folder using the Eclipse popup window browse button. Create a new project File tab --> New --> Other --> Web --> Dynamic Web Project and name it **JavaRMI**. This is the name of the folder containing the project, Eclipse will pull in the files into the created project. You can see a video of how to add sever to eclipse project [Here](https://www.youtube.com/watch?v=2kIiSeY71oQ).               
-Once the project and server is set up in eclipse, right click on the JavaRMI project --> Properties --> Targeted Runtimes and tick the box for Apache tomcat 9. To run the application select the run tab --> run --> run on server
+Once the project and server is set up in eclipse, right click on the JavaRMI project --> Properties --> Targeted Runtimes and tick the box for Apache tomcat 9.        
+
+To run the application in Eclipse   
+1) right click on Servant.java in the ie.gmit.sw package and **run as java application**.
+2) right click on the server in the servers tab and start server.
+3) right click on index.jsp in the webcontent folder and **run on server**.        
 
 * **Apache Tomcat**         
-Running the application on Apache Tomcat using the comparator.war and string-service.jar files.       
-Place the **comparator.war** file into the apache-tomcat/webapps folder. Navigate into the apache-tomcat/bin folder using Command Line. Run the comparator.war with the following command **startUp.bat** command.             
+Place the string-service.jar and comparator.war file into the apche-tomcat/webapps folder. The string-service.jar can be placed in any folder, place in the same folder for convenience. Navigate into the apcha-tomcat/webapps folder using the command line.     
+Run the **string-service.jar** with the following command: **java –cp ./string-service.jar ie.gmit.sw.Servant**.     
 
-Place the string-service.jar file into the apche-tomcat/webapps folder. Navigate into the apcha-tomcat/webapps folder using a seperate command line.     
-Run the **string-service.jar** with the following command: java –cp ./string-service.jar ie.gmit.sw.Servant 
+Navigate into the apache-tomcat/bin folder using a seperate Command Line. Run the comparator.war with the following command **startUp.bat**. 
+
+Open a browser and type **localhost:8080/comparator** into the address bar.          
 
 1) Select Algoritm from the drop-down menu        
 2) Enter a text string into each input box         
