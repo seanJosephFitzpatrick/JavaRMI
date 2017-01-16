@@ -58,7 +58,7 @@ Open a browser and type **localhost:8080/comparator** into the address bar.
 
 ## Built With
 
-* [Eclipse JEE Neon](https://www.genuitec.com/eclipse-neon/)  - Eclipse
+* [Eclipse JEE Neon](https://www.genuitec.com/eclipse-neon/)  - Eclipse Java EE IDE for Web Developers. Version: Neon.1a Release (4.6.1)
 * [Apache Tomcat](https://tomcat.apache.org/download-90.cgi) - Apache Tomcat
 * [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - JDK/JRE                    
 
