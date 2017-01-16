@@ -31,7 +31,7 @@ Video tutorial of How to Install Apache Tomcat on Windows here [Install Apache T
 Launch Eclipse and set the workspace as the root folder that was extracted from the GitHub project. Select the folder using the Eclipse popup window browse button. Create a new project File tab --> New --> Other --> Web --> Dynamic Web Project and name it **JavaRMI**. This is the name of the folder containing the project, Eclipse will pull in the files into the created project. You can see a video of how to add sever to eclipse project [Here](https://www.youtube.com/watch?v=2kIiSeY71oQ).               
 Once the project and server is set up in eclipse, right click on the JavaRMI project --> Properties --> Targeted Runtimes and tick the box for Apache tomcat 9. To run the application select the run tab --> run --> run on server
 
-* **Apache Tomcat** 
+* **Apache Tomcat**         
 Running the application on Apache Tomcat using the comparator.war and string-service.jar files.       
 Place the **comparator.war** file into the apache-tomcat/webapps folder. Navigate into the apache-tomcat/bin folder using Command Line. Run the comparator.war with the following command **startUp.bat** command.             
 
