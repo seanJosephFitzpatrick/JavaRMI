@@ -68,4 +68,5 @@ Open a browser and type **localhost:8080/comparator** into the address bar.
 
 ## License
 
-This project is licensed under the MIT License
+
+This project is licensed under the [MIT](https://github.com/seanJosephFitzpatrick/JavaRMI/blob/master/LICENSE) License
