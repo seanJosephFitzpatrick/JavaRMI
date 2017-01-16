@@ -34,9 +34,9 @@ Launch Eclipse and set the workspace as the root folder that was extracted from 
 Once the project and server is set up in eclipse, right click on the JavaRMI project --> Properties --> Targeted Runtimes and tick the box for Apache tomcat 9. Click Apply and ok.      
 
 To run the application in Eclipse   
-1) right click on Servant.java in the ie.gmit.sw package and **run as java application**.
-2) right click on the server in the servers tab and start server.
-3) right click on index.jsp in the webcontent folder and **run on server**.        
+1) right click on Servant.java in the ie.gmit.sw package and select --> **run as --> java application**.           
+2) right click on the server in the servers tab and start server.            
+3) right click on index.jsp in the webcontent folder and **run on server**.                    
 
 * **Apache Tomcat**         
 Place the string-service.jar and comparator.war file into the apche-tomcat/webapps folder. The string-service.jar can be placed in any folder, place in the same folder for convenience. Navigate into the apcha-tomcat/webapps folder using the command line.     
