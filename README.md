@@ -1,6 +1,12 @@
 # RMI String Comparison Service.          
 
-A Java RMI [Remote Method Invocation] [https://en.wikipedia.org/wiki/Java_remote_method_invocation] and JSP [Java Server Pages] [https://en.wikipedia.org/wiki/JavaServer_Pages] Dynamic Web Application using string comparison algorithms to compare two text strings.        
+A Java RMI [Remote Method Invocation] [https://en.wikipedia.org/wiki/Java_remote_method_invocation] and JSP [Java Server Pages] [https://en.wikipedia.org/wiki/JavaServer_Pages] Dynamic Web Application using string comparison algorithms to compare two text strings.      
+
+## Algorithms Implemented.      
+
+[Hamming Distance][https://en.wikipedia.org/wiki/Hamming_distance]         
+[Levenshtein Distance][https://en.wikipedia.org/wiki/Levenshtein_distance]   
+[Damerau-Levenshtein Distance][https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance]    
 
 ## Getting Started
 
@@ -63,9 +69,3 @@ Open a browser and type **localhost:8080/comparator** into the address bar.
 ## License
 
 This project is licensed under the MIT License
-
-## Algorithms Implemented.      
-
-[Hamming Distance][https://en.wikipedia.org/wiki/Hamming_distance]         
-[Levenshtein Distance][https://en.wikipedia.org/wiki/Levenshtein_distance]   
-[Damerau-Levenshtein Distance][https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance]    
