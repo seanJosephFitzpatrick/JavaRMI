@@ -64,7 +64,7 @@ Open a browser and type **localhost:8080/comparator** into the address bar.
 
 ## Authors
 
-* **Sean Fitzpatrick**
+[Sean Fitzpatrick](https://github.com/seanJosephFitzpatrick)            
 
 ## License
 
