@@ -10,7 +10,7 @@ A Java RMI [Remote Method Invocation] [https://en.wikipedia.org/wiki/Java_remote
 
 ## Getting Started
 
-Download and extract the zip folder here [JavaRMI](https://github.com/seanJosephFitzpatrick/JavaRMI) 
+Download and extract the zip folder here [JavaRMI](https://github.com/seanJosephFitzpatrick/JavaRMI/archive/master.zip) 
 
 ### Prerequisites
 
