@@ -1,6 +1,8 @@
 # RMI String Comparison Service.          
 
-A Java RMI [Remote Method Invocation] [https://en.wikipedia.org/wiki/Java_remote_method_invocation] and JSP [Java Server Pages] [https://en.wikipedia.org/wiki/JavaServer_Pages] Dynamic Web Application using string comparison algorithms to compare two text strings.      
+A Java RMI [Remote Method Invocation] [https://en.wikipedia.org/wiki/Java_remote_method_invocation] and JSP [Java Server Pages] [https://en.wikipedia.org/wiki/JavaServer_Pages] Dynamic Web Application using string comparison algorithms to compare two text strings.        
+
+![image](https://user-images.githubusercontent.com/9217947/41128931-2fd0bf68-6ab0-11e8-909f-3d72af79b234.PNG)
 
 ## Algorithms Implemented.      
 
