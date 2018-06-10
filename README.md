@@ -4,7 +4,7 @@
 
 4th year Software Development project. The project is a dynamic Web Application using string comparison algorithms to compare two text strings. This is achieved using the Java Remote Method Invocation (RMI) API which provides a mechanism to create distributed applications in java. Java RMI allows a machine (JVM) to invoke methods on another machine (JVM). The first machine (JVM) looks up the method it wants to invoke in the RMI Registry and sends the two strings. The method is invoked on the second machine (JVM) and the two strings are compared and the result returned to the first machine (JVM).
 
-Languages, Technologies and Implementation Architecture used for this project:
+Languages, Technologies and Implementation Architecture used for this project:             
 Java, [Java RMI](https://docs.oracle.com/javase/tutorial/rmi/), [Java Server Pages](http://www.oracle.com/technetwork/java/index-jsp-138231.html), Eclipse.
 
 ## Algorithms Implemented.      
